@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="IMG/FAVICON.png">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="quiz-container" id="quiz-container">
+
+        <div id="start-screen">
+            <h1>Quiz de Desenvolvimento Web</h1>
+            <p>Teste seus conhecimentos em HTML, CSS e JavaScript. São 15 perguntas sobre o universo front-end.</p>
+            <img src="IMG/DEVICON.png" alt="DEVICON">
+            <input type="text" id="player-name" placeholder="Digite seu nome aqui" class="input-name">
+            <button id="start-btn" class="btn">Começar!</button>
+        </div>
+
+        <div id="quiz-screen" class="hide">
+            <div id="quiz-header">
+                <div id="question-counter"></div>
+                <div id="score-display">Pontos: <span id="score">0</span></div>
+            </div>
+            <div id="question-text"></div>
+            <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+            <h2>Quiz Finalizado, <span id="player-name-final"></span>!</h2>
+            <div id="final-results"></div>
+            <p id="performance-message"></p>
+            <div class="chart-container">
+                <canvas id="results-chart"></canvas>
+            </div>
+            <button id="restart-btn" class="btn">Jogar Novamente</button>
+            <button id="menu-btn" class="btn btn-secondary">Voltar ao Menu</button>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+
+</body>
+</html>
